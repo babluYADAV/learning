@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../redux/actions/user";
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const payload = {
-    name: "shivramyadav52@gmail.com",
-  };
+  const payload = useMemo(() => {
+    return {
+      name: "shivramyadav52@gmail.com",
+    };
+  }, []);
   useEffect(() => {
     dispatch(getUser(payload));
-  }, [dispatch]);
+  }, [dispatch, payload]);
 
   useSelector((state) => {
     console.log(state.users);

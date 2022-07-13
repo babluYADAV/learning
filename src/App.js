@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 import CheckConnection from "./common/CheckConnection";
 import Home from "./Components/Home";
 import Products from "./Components/Products";
@@ -12,6 +13,7 @@ function App() {
     <CheckConnection>
       <BrowserRouter>
         <div style={{ textAlign: "center" }}>
+          <Button variant="contained">Hello World</Button>
           <Link to="/" style={{ padding: "20px", textAlign: "center" }}>
             Home
           </Link>

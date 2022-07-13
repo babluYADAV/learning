@@ -9,7 +9,7 @@ const Profile = () => {
   };
   useEffect(() => {
     dispatch(getUser(payload));
-  }, []);
+  }, [dispatch]);
 
   useSelector((state) => {
     console.log(state.users);
